@@ -16,7 +16,7 @@ import com.google.gson.GsonBuilder;
 import com.hi.model.Category;
 import com.hi.service.CategoryService;
 
-@Path("/rest/")
+@Path("/")
 public class IndexAction {
 	private static Logger logger = LogManager.getLogger(IndexAction.class);
 	@Autowired

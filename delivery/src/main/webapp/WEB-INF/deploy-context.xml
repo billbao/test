@@ -27,7 +27,7 @@
     </jaxrs:server>
 
     <bean id="indexAction" class="com.hi.control.IndexAction" />
-    
+
     <context:property-placeholder location="classpath*:/appConfig.properties" />
     
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"

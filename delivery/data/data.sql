@@ -1,0 +1,1 @@
+insert into Category (name, required) values ('套餐', 0);
