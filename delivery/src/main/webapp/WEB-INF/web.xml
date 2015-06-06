@@ -8,15 +8,6 @@
     <display-name>Delivery System</display-name>
     <description>Delivery System</description>
 
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/deploy-context.xml</param-value>
-    </context-param>
-
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
-    
     <filter>
         <filter-name>Set Character Encoding</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -34,6 +25,15 @@
         <filter-name>Set Character Encoding</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/deploy-context.xml</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
     <servlet>
         <servlet-name>CXFServlet</servlet-name>
@@ -54,8 +54,7 @@
 
     <servlet-mapping>
         <servlet-name>springMVC</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
-
 
 </web-app>
