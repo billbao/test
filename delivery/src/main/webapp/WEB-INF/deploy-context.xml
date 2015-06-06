@@ -81,7 +81,7 @@
     	<security:access-denied-handler error-page="/login?error=403"/>
 		<security:intercept-url pattern="/login" access="permitAll" />
 		<security:intercept-url pattern="/protected/**" access="isAuthenticated()" />
-		<security:intercept-url pattern='/admin*' access='ROLE_ADMIN' />
+		<security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
 		<security:form-login login-page="/login" authentication-failure-url="/login?error=403" default-target-url="/protected/dashboard" />
 		<security:logout invalidate-session="true" logout-success-url="/login" logout-url="/logout" />
 	</security:http>

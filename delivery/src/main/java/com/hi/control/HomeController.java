@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-
 	private static final Logger logger = LogManager
 			.getLogger(HomeController.class);
 
@@ -23,7 +22,7 @@ public class HomeController {
 		return new ModelAndView("home", model.asMap());
 	}
 	
-	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView login(Locale locale, Model model) {
 		return new ModelAndView("login", model.asMap());
 	}
