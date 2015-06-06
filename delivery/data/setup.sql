@@ -2,6 +2,8 @@ DROP TABLE User;
 CREATE TABLE User (
   id int(11) unsigned NOT NULL AUTO_INCREMENT,
   name varchar(50) NOT NULL,
+  password varchar(50) NOT NULL,
+  role varchar(20) NOT NULL,
   readed tinyint(1) DEFAULT 0,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
@@ -21,6 +23,7 @@ DROP TABLE Category;
 CREATE TABLE Category (
   id int(11) unsigned NOT NULL AUTO_INCREMENT,
   name varchar(50) NOT NULL,
+  description varchar(512),
   required tinyint(1) DEFAULT 0,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

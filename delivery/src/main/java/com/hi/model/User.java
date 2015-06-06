@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Category")
-public class Category {
+@Table(name = "User")
+public class User {
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,9 +17,11 @@ public class Category {
 
 	private String name;
 
-	private boolean required;
+	private String password;
 
-	private String description;
+	private String role;
+
+	private boolean readed;
 
 	public int getId() {
 		return id;
@@ -37,20 +39,28 @@ public class Category {
 		this.name = name;
 	}
 
-	public boolean isRequired() {
-		return required;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setRequired(boolean required) {
-		this.required = required;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getRole() {
+		return role;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public boolean isReaded() {
+		return readed;
+	}
+
+	public void setReaded(boolean readed) {
+		this.readed = readed;
 	}
 
 }

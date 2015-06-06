@@ -26,6 +26,13 @@
 		<property name="preparerFactoryClass"
 			value="org.springframework.web.servlet.view.tiles3.SpringBeanPreparerFactory"/>
 	</bean>
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/protected/**"/>
+			<bean class="com.hi.app.LoginInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="favorPathExtension" value="true"/>

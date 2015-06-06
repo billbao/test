@@ -10,6 +10,19 @@
 	</definition>
 	 
 	<!-- Pages -->
+	<definition name="welcomePage" extends="master.page">
+		<put-attribute name="menu" value="/views/template/sidebar.jsp" />
+		<!-- <put-attribute name="menu" value="" /> -->
+		<put-attribute name="body" value="/views/template/welcome.jsp" />
+	</definition>
+	 
+	<definition name="login" extends="master.page">
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="/views/template/login.jsp" />
+	</definition>
+	
 	<definition name="home" extends="master.page">
 		<put-attribute name="menu" value="/views/template/sidebar.jsp" />
 		<put-attribute name="body" value="/views/home.jsp" />
