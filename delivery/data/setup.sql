@@ -25,6 +25,7 @@ CREATE TABLE Category (
   name varchar(50) NOT NULL,
   description varchar(512),
   required tinyint(1) DEFAULT 0,
+  canHalf tinyint(1) DEFAULT 0,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
@@ -33,9 +34,9 @@ CREATE TABLE Product (
   id int(11) unsigned NOT NULL AUTO_INCREMENT,
   CategoryId int(11) NOT NULL,
   name varchar(50) NOT NULL,
+  description varchar(512),
   imageurl varchar(100) NOT NULL,
   price double DEFAULT 0,
-  canHalf tinyint(1) DEFAULT 0,
   isPackage tinyint(1) DEFAULT 0,
   isAvalible tinyint(1) DEFAULT 0,
   PRIMARY KEY (id)

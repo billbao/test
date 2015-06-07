@@ -20,6 +20,8 @@ public class Category {
 	private boolean required;
 
 	private String description;
+	
+	private boolean canHalf;
 
 	public int getId() {
 		return id;
@@ -53,4 +55,11 @@ public class Category {
 		this.description = description;
 	}
 
+	public boolean isCanHalf() {
+		return canHalf;
+	}
+
+	public void setCanHalf(boolean canHalf) {
+		this.canHalf = canHalf;
+	}
 }
